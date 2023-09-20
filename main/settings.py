@@ -44,7 +44,12 @@ INSTALLED_APPS = [
 
     #local apps
     'home',
+    'users',
 
+    # 3rd party
+    'crispy_forms',
+    'crispy_bootstrap4',
+ 
 ]
 
 MIDDLEWARE = [
@@ -133,3 +138,10 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+#overide account url paths
+
+LOGIN_REDIRECT_URL = 'recipes-home'
+LOGIN_URL = 'user-login'
